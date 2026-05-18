@@ -44,7 +44,7 @@ Ferramentas
 * Docker
 * Trello
 
-* 🧠 Funcionamento da IA Simulada
+ 🧠 Funcionamento da IA Simulada
 
 A análise das mensagens funciona através de regras inteligentes e identificação de palavras-chave suspeitas, como:
 
