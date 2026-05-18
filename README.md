@@ -20,7 +20,6 @@ Desenvolver uma solução tecnológica com foco em segurança digital e prevenç
     * Seguro
     * Suspeito
     * Golpe provável
-* Dashboard com estatísticas de fraudes
 * Histórico de denúncias
 
 🛠️ Tecnologias Utilizadas
