@@ -28,7 +28,6 @@ Back-end
 
 * Spring Boot
 * Java
-* REST API
 
 Front-end
 
