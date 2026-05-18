@@ -16,11 +16,11 @@ Desenvolver uma solução tecnológica com foco em segurança digital e prevenç
 * Consulta de números suspeitos
 * Denúncia de golpes
 * Análise inteligente de mensagens
+* Histórico de denúncias
 * Classificação de risco:
     * Seguro
     * Suspeito
     * Golpe provável
-* Histórico de denúncias
 
 🛠️ Tecnologias Utilizadas
 
