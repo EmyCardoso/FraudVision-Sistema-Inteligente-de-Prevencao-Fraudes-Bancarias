@@ -35,14 +35,14 @@ Front-end
 
 Banco de Dados
 
-* PostgreSQL
+* MySQL
+* Oracle
 
 Ferramentas
 
 * GitHub
 * Docker
-* Swagger
-* JWT
+* Trello
 
 * 🧠 Funcionamento da IA Simulada
 
