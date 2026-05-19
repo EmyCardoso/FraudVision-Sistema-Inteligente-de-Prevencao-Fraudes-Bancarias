@@ -13,13 +13,13 @@ O gerenciamento das atividades será realizado através do Trello e Githug.
 
 👥 Estrutura da Equipe
 
-- Coordenador do Projeto  
-- Product Owner (PO)  
-- 3 Analistas de Desenvolvimento  
-- Professor responsável atuando como gerente do projeto  
-- Bradesco atuando como cliente do sistema  
+- Gestor: Rodrigo Bossini
+- Coordenador: Emilyn Cardoso RA: 824214832
+- Product Owner (PO): Ysadora Jacon RA:
+- Analistas de Sistemas: Guilherme RA:
+- Analistas de Sistemas:           RA:
+- Analistas de Sistemas:           RA:
 
----
 
 🛠️ Tecnologias Utilizadas
 
