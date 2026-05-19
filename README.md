@@ -28,6 +28,7 @@ O gerenciamento das atividades será realizado através do Trello e Githug.
 - Analistas de Sistemas: João Victor Gouveia Santinello  RA:  824212987
 - Analistas de Sistemas: MICAEL WILLIAM COSTA DE OLIVEIRA LISBOA RA: 824213069
 - Product Owner (PO): Ysadora da Silva Chacon Milani RA: 824217796
+
 🛠️ Tecnologias Utilizadas
 
  Back-end
