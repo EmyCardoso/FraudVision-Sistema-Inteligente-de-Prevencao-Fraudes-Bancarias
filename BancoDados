@@ -1,1 +1,5 @@
+O banco de dados do FraudVision será responsável pelo armazenamento, organização e gerenciamento de todas as informações do sistema.
 
+Ele armazenará dados de usuários, denúncias de golpes, números suspeitos, mensagens analisadas pela IA simulada e resultados das classificações de risco.
+
+Além disso, o banco permitirá a geração de relatórios e dashboards com estatísticas de fraudes, garantindo integridade, segurança e eficiência no acesso às informações da plataforma.
