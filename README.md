@@ -1,6 +1,6 @@
 📌 Sobre o Projeto
 
-O FraudVision é uma sistema desenvolvida para auxiliar na prevenção de golpes bancários, principalmente falsas centrais de atendimento, SMS fraudulentos e mensagens de WhatsApp.
+O FraudVision é uma sistema desenvolvido para auxiliar na prevenção de golpes bancários, principalmente falsas centrais de atendimento, SMS fraudulentos e mensagens de WhatsApp.
 
 O sistema utiliza uma IA simulada baseada em regras e palavras-chave para identificar possíveis tentativas de fraude, permitindo que usuários consultem números suspeitos, denunciem golpes e analisem mensagens recebidas.
 
