@@ -1,1 +1,5 @@
+O back-end do FraudVision será responsável por toda a lógica do sistema, gerenciamento de usuários, processamento das denúncias e análise inteligente das mensagens suspeitas.
 
+Ele realizará a comunicação entre o front-end e o banco de dados através de uma API REST, permitindo cadastro e login de usuários, consulta de números suspeitos, armazenamento de denúncias e geração do score de risco das mensagens analisadas pela IA simulada.
+
+Além disso, o back-end também será responsável pela segurança da aplicação, autenticação com JWT e organização dos dados exibidos no dashboard do sistema.
