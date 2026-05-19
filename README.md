@@ -4,7 +4,7 @@
 
 O desenvolvimento do FraudVision será baseado em metodologias ágeis, utilizando Scrum e Kanban para organização das tarefas, acompanhamento das entregas e evolução contínua do sistema.
 
-O gerenciamento das atividades será realizado através do Trello e GitHug 
+O gerenciamento das atividades será realizado através do Trello e Githug.
 
 (https://trello.com/b/bRmVgpjx/fraudvision)
 
