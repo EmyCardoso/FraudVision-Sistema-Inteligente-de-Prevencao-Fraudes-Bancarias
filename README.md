@@ -5,7 +5,9 @@
 O desenvolvimento do FraudVision será baseado em metodologias ágeis, utilizando Scrum e Kanban para organização das tarefas, acompanhamento das entregas e evolução contínua do sistema.
 
 O gerenciamento das atividades será realizado através do Trello e GitHug para os repositorios
+
 (https://trello.com/b/bRmVgpjx/fraudvision)
+
 (https://github.com/EmyCardoso/FraudVision-Sistema-Inteligente-de-Prevencao-Fraudes-Bancarias)
 
 
