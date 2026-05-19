@@ -32,8 +32,8 @@ O gerenciamento das atividades será realizado através do Trello e Githug.
 🛠️ Tecnologias Utilizadas
 
  Back-end
-- Spring Boot  
-- Java  
+- Spring Boot (framework)
+- Java        (Linguagem de programação)
 
 Front-end
 - React  
