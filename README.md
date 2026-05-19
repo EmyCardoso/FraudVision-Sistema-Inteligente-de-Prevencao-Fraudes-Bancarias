@@ -24,7 +24,7 @@ O gerenciamento das atividades será realizado através do Trello e Githug.
 - Gestor: Rodrigo Bossini
 - Coordenador: Emilyn Cardoso RA: 824214832
 - Analistas de Sistemas: Guilherme Garcia Ienke RA: 824222500
-- Analistas de Sistemas:           RA:
+- Analistas de Sistemas: Guilherme da silva Barbosa RA: 825237072
 - Analistas de Sistemas: João Victor Gouveia Santinello  RA:  824212987
 - Analistas de Sistemas: MICAEL WILLIAM COSTA DE OLIVEIRA LISBOA RA: 824213069
 - Product Owner (PO): Ysadora da Silva Chacon Milani RA: 824217796
