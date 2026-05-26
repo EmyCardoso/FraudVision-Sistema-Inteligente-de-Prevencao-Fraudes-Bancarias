@@ -1,0 +1,5 @@
+O front-end do FraudVision será responsável pela interface visual e interação do usuário com o sistema.
+
+A aplicação permitirá que os usuários realizem consultas de números suspeitos, enviem denúncias, analisem mensagens fraudulentas e visualizem os resultados da IA simulada de forma simples e intuitiva.
+
+Além disso, o front-end exibirá dashboards com estatísticas de fraudes, níveis de risco e histórico de denúncias, proporcionando uma experiência moderna, responsiva e semelhante a plataformas utilizadas por instituições bancárias.
