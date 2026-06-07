@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudVision - Criar Conta</title>
+    <style>
+        .logo-topo {
+            margin-top: -100px;
+            width: 100%;
+            max-width: 650px; 
+            height: auto;
+            margin-bottom: 0px; 
+            display: block;
+        }
+    
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #0c0d0f;
+            overflow: hidden;
+        }
+
+        /* Container principal que divide a tela em duas */
+        .login-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* LADO ESQUERDO: Área do Formulário com fundo vermelho */
+        .esquerda {
+            flex: 1; 
+            background: linear-gradient(135deg, #7c0606, #150000);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            padding-top: 0px;        
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        }
+
+        /* LADO DIREITO: Área com a foto da equipe */
+        .direita {
+            flex: 1.8; 
+            background-image: url('fundo.png'); 
+            background-size: cover;
+            background-position: right center; 
+            position: relative;
+            margin-left: -10%; 
+            z-index: 1;
+        }
+
+        /* O Card Branco do Cadastro (Ajustado para acomodar mais campos) */
+        .card-login {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 20px 40px; /* Deixou o card mais compacto para caber o novo campo */
+        border-radius: 20px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        margin-right: 15%; 
+        margin-top: -200px;
+        }
+
+        .card-login h2 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 15px; /* Diminuiu o espaço abaixo do título */
+        }
+
+        .campo-grupo {
+            margin-bottom: 10px; /* Mantém os campos mais próximos */
+        }
+
+        .campo-grupo label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .campo-grupo input {
+            width: 100%;
+            padding: 10px 12px; /* Caixa levemente mais compacta */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #d60000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background-color: #a30000;
+        }
+
+        /* Link para retornar ao Login */
+        .link-cadastro {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .link-cadastro a {
+            color: #d60000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .link-cadastro a:hover {
+            color: #a30000;
+            text-decoration: underline;
+        }
+
+        /* Rodapé com os 3 cards de benefícios */
+        .beneficios-rodape {
+            position: absolute;
+            bottom: 30px;
+            left: 5%;
+            right: 5%;
+            z-index: 10;
+            display: flex;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .beneficio-item {
+            flex: 1;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .beneficio-item strong {
+            display: block;
+            color: #ff4d4d;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="esquerda">
+            <img src="Logo.png" alt="Logo FraudVision" class="logo-topo">
+
+            <div class="card-login">
+                <h2>Crie sua conta gratuita</h2>
+                <form>
+<div class="campo-grupo">
+        <label>Nome Completo</label>
+        <input type="text" placeholder="Digite seu nome">
+    </div>
+
+    <div class="campo-grupo">
+        <label>E-mail Corporativo</label>
+        <input type="email" placeholder="seu@email.com">
+    </div>
+
+    <div class="campo-grupo">
+        <label>Crie uma Senha</label>
+        <input type="password" placeholder="No mínimo 8 caracteres">
+    </div>
+
+    <div class="campo-grupo">
+        <label>Confirme sua Senha</label>
+        <input type="password" placeholder="Digite a senha novamente">
+    </div>
+
+    <button type="submit" class="btn-login">Criar Conta</button>
+
+    <div class="link-cadastro">
+        Já possui uma conta? <a href="index.html">Faça login</a>
+    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="direita"></div>
+
+    </div>
+
+    <div class="beneficios-rodape">
+        <div class="beneficio-item">
+            <strong>Proteção Inteligente</strong>
+            Tecnologia avançada para identificar e prevenir golpes em tempo real.
+        </div>
+        <div class="beneficio-item">
+            <strong>Atendimento Especializado</strong>
+            Equipe treinada para orientar e ajudar você em qualquer situação.
+        </div>
+        <div class="beneficio-item">
+            <strong>Segurança e Confiança</strong>
+            Seus dados protegidos com os mais altos padrões de segurança.
+        </div>
+    </div>
+
+</body>
+</html>
