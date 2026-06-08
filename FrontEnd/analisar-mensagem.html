@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FraudVision - Analisar Mensagem</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+body{
+    background:#f5f6fa;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#fff;
+    border-right:1px solid #ddd;
+}
+
+.logo{
+    height:80px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:20px;
+    color:#e61f25;
+    font-size:22px;
+    font-weight:bold;
+    border-bottom:1px solid #eee;
+}
+
+.menu{
+    padding:15px;
+}
+
+.menu ul{
+    list-style:none;
+}
+
+.menu li{
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.menu li:hover{
+    background:#f5f5f5;
+}
+
+.menu li.active{
+    background:#e61f25;
+    color:white;
+}
+
+.content{
+    flex:1;
+}
+
+.topbar{
+    background:white;
+    height:80px;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items:center;
+    padding:0 30px;
+}
+
+.main{
+    padding:30px;
+}
+
+.main h1{
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    border:1px solid #eee;
+    overflow:hidden;
+}
+
+.form-section{
+    padding:20px;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    resize:none;
+    font-size:15px;
+}
+
+button{
+    margin-top:15px;
+    background:#e61f25;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#d1161c;
+}
+
+.result{
+    border-top:1px solid #eee;
+    padding:20px;
+}
+
+.alert{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.alert i{
+    color:#e61f25;
+    font-size:55px;
+}
+
+.alert h2{
+    color:#e61f25;
+}
+
+.alert .risk{
+    color:#e61f25;
+    font-weight:bold;
+}
+
+.analysis{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.reasons h3{
+    margin-bottom:15px;
+}
+
+.reasons ul{
+    list-style:none;
+}
+
+.reasons li{
+    margin-bottom:12px;
+    color:#555;
+}
+
+.reasons li::before{
+    content:"⚠ ";
+    color:#e61f25;
+}
+
+.score{
+    text-align:center;
+}
+
+.circle{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:8px solid #e61f25;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#333;
+}
+
+.score p{
+    margin-top:10px;
+    color:#666;
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .analysis{
+        flex-direction:column;
+        gap:30px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            FraudVision
+        </div>
+
+        <div class="menu">
+           <ul>
+            <li><i class="fa-solid fa-house"></i> <a href="dashboard.html">Dashboard</a></li>
+
+            <li class="active">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="consultar-numero.html">Consultar Número</a>
+            </li>
+
+            <li><i class="fa-regular fa-message"></i> <a href="analisar-mensagem.html">Analisar Mensagem</a></li>
+            <li><i class="fa-solid fa-triangle-exclamation"></i> <a href="cadastrar-denuncia.html">Denunciar Golpe</a></li>
+            <li><i class="fa-solid fa-clock-rotate-left"></i> <a href="historico.html">Histórico</a></li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i> <a href="TelaLogin.html">Sair</a></li>
+        </ul>
+        </div>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="main">
+
+            <h1>Analisar Mensagem</h1>
+            <p class="subtitle">
+                Cole uma mensagem suspeita para análise da IA
+            </p>
+
+            <div class="card">
+
+                <div class="form-section">
+
+    <textarea id="mensagem" placeholder="Cole aqui a mensagem suspeita para análise..."></textarea>
+
+    <button onclick="analisarMensagem()">
+        Analisar Mensagem
+    </button>
+
+</div>
+
+<div class="result">
+
+    <div class="alert">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <div>
+            <h2 id="tituloResultado">Aguardando análise</h2>
+
+            <div class="risk" id="riscoResultado">
+                Risco: -
+            </div>
+
+            <p id="descricaoResultado">
+                Digite uma mensagem e clique em "Analisar Mensagem".
+            </p>
+        </div>
+
+    </div>
+
+    <div class="analysis">
+
+        <div class="reasons">
+
+            <h3>Motivos da análise</h3>
+
+            <ul id="listaMotivos">
+
+            </ul>
+
+        </div>
+
+        <div class="score">
+
+            <div class="circle" id="scoreResultado">
+                0%
+            </div>
+
+            <p>Probabilidade de Golpe</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+                
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+<script>
+
+function analisarMensagem() {
+
+    const mensagem =
+        document.getElementById("mensagem")
+        .value
+        .toLowerCase();
+
+    let score = 0;
+    let motivos = [];
+
+    if (mensagem.includes("http")) {
+        score += 30;
+        motivos.push("Link suspeito detectado");
+    }
+
+    if (mensagem.includes("pix")) {
+        score += 20;
+        motivos.push("Solicitação de PIX");
+    }
+
+    if (mensagem.includes("urgente")) {
+        score += 20;
+        motivos.push("Uso de linguagem de urgência");
+    }
+
+    if (mensagem.includes("senha")) {
+        score += 15;
+        motivos.push("Solicitação de senha");
+    }
+
+    if (mensagem.includes("banco")) {
+        score += 15;
+        motivos.push("Referência bancária");
+    }
+
+    let risco = "BAIXO";
+    let titulo = "Pouco Suspeita";
+    let descricao = "A mensagem apresenta poucos sinais de fraude.";
+
+    if (score >= 70) {
+        risco = "ALTO";
+        titulo = "Golpe Provável";
+        descricao = "A IA identificou diversos padrões suspeitos.";
+    }
+    else if (score >= 40) {
+        risco = "MÉDIO";
+        titulo = "Mensagem Suspeita";
+        descricao = "A mensagem possui alguns indícios de golpe.";
+    }
+
+    document.getElementById("tituloResultado").innerText = titulo;
+    document.getElementById("riscoResultado").innerText = "Risco: " + risco;
+    document.getElementById("descricaoResultado").innerText = descricao;
+    document.getElementById("scoreResultado").innerText = score + "%";
+
+    const lista = document.getElementById("listaMotivos");
+
+    lista.innerHTML = "";
+
+    if (motivos.length === 0) {
+
+        lista.innerHTML =
+            "<li>Nenhum comportamento suspeito identificado.</li>";
+
+    } else {
+
+        motivos.forEach(motivo => {
+
+            lista.innerHTML += `<li>${motivo}</li>`;
+
+        });
+
+    }
+}
+
+</script>
+</body>
+</html>

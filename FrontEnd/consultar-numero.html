@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FraudVision</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+body{
+    background:#f6f7fb;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#fff;
+    border-right:1px solid #e5e5e5;
+}
+
+.logo{
+    height:80px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:20px;
+    border-bottom:1px solid #eee;
+    color:#d61f26;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:20px 10px;
+}
+
+.sidebar li{
+    padding:15px;
+    margin-bottom:8px;
+    border-radius:8px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#555;
+}
+
+.sidebar li.active{
+    background:#e61f25;
+    color:white;
+}
+
+.content{
+    flex:1;
+    padding:30px;
+}
+
+.topbar{
+    height:50px;
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.page-title h1{
+    font-size:36px;
+    margin-bottom:5px;
+}
+
+.page-title p{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.input-group{
+    flex:1;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    padding:0 15px;
+}
+
+.input-group input{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:18px 10px;
+    font-size:18px;
+}
+
+.search-box button{
+    width:150px;
+    border:none;
+    border-radius:10px;
+    background:#e61f25;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.result-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    border:1px solid #eee;
+}
+
+.alert-info{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.alert-info .icon{
+    font-size:60px;
+    color:#e61f25;
+}
+
+.alert-info h2{
+    color:#e61f25;
+}
+
+.alert-info span{
+    color:#e61f25;
+    font-weight:bold;
+}
+
+.reports{
+    text-align:center;
+}
+
+.reports h1{
+    font-size:60px;
+    color:#e61f25;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    border:1px solid #eee;
+}
+
+.card h3{
+    margin-bottom:20px;
+}
+
+.info-item{
+    margin-bottom:20px;
+}
+
+.danger{
+    color:#e61f25;
+    font-weight:bold;
+}
+
+.history{
+    list-style:none;
+}
+
+.history li{
+    margin-bottom:15px;
+    position:relative;
+    padding-left:20px;
+}
+
+.history li::before{
+    content:"●";
+    color:#e61f25;
+    position:absolute;
+    left:0;
+}
+
+.card a{
+    color:#e61f25;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box button{
+        width:100%;
+        height:55px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .result-card{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            FraudVision
+        </div>
+
+        <ul>
+            <li><i class="fa-solid fa-house"></i> <a href="dashboard.html">Dashboard</a></li>
+
+            <li class="active">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="consultar-numero.html">Consultar Número</a>
+            </li>
+
+            <li><i class="fa-regular fa-message"></i> <a href="analisar-mensagem.html">Analisar Mensagem</a></li>
+            <li><i class="fa-solid fa-triangle-exclamation"></i> <a href="cadastrar-denuncia.html">Denunciar Golpe</a></li>
+            <li><i class="fa-solid fa-clock-rotate-left"></i> <a href="historico.html">Histórico</a></li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i> <a href="TelaLogin.html">Sair</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="page-title">
+            <h1>Consultar Número</h1>
+            <p>Verifique a reputação de um número de telefone</p>
+        </div>
+
+        <div class="search-box">
+            <div class="input-group">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="telefone" id="telefone" placeholder="(11) 91234-5678">
+            </div>
+
+            <button onclick="consultarNumero()">Consultar</button>
+        </div>
+
+        <div class="result-card">
+
+            <div class="alert-info">
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div>
+                    <h2>Golpe Provável</h2>
+                    Risco: <span class="legenda">0</span>
+                    <p class="descricao">Este número possui um alto número de denúncias.</p>
+                </div>
+            </div>
+
+            <div class="reports">
+                <h1>0</h1>
+                <p>Denúncias</p>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Informações do número</h3>
+
+                <div class="info-item">
+                    <strong>Número</strong>
+                    <p>(11) 91234-5678</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Operadora</strong>
+                    <p>Vivo</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Classificação</strong>
+                    <p class="danger">● Golpe Provável</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Histórico de denúncias</h3>
+
+                <ul class="history">
+                    <li>Falsa central bancária</li>
+                    <li>Pedido de dados pessoais</li>
+                    <li>Link de phishing enviado</li>
+                    <li>Solicitação de PIX</li>
+                </ul>
+
+                <a href="#">Ver todas as denúncias</a>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+<script>
+    async function consultarNumero() {
+
+        const telefone = document.getElementById("telefone").value;
+
+        const resposta = await fetch(
+            "http://localhost:8080/denuncias/telefone/" + telefone,
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+
+        // if(resposta.ok){
+        //     alert("Denúncia enviada com sucesso!");
+        // }else{
+        //     alert("Erro ao enviar denúncia");
+        // }
+
+        const result = await resposta.json();
+        console.log(result);
+
+        const historico = document.querySelector(".history");
+        historico.innerHTML = "";
+
+        result.forEach(item => {
+            historico.innerHTML += `
+                <li>${item.descricao}</li>
+            `;
+        });
+        
+        const info = document.querySelector(".card").innerHTML = `
+            <h3>Informações do número</h3>
+
+                <div class="info-item">
+                    <strong>Número</strong>
+                    <p>${result[0].telefone}</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Score</strong>
+                    <p>${result[0].score}</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Nível</strong>
+                    <p class="danger">● ${result[0].risco}</p>
+                </div>
+            
+        `
+        const descricao = document.querySelector(".descricao").innerText = result[0].descricao;
+        const legenda = document.querySelector(".legenda").innerText = result[0].risco;
+        const quantidadeDenuncias = document.querySelector(".reports h1");
+        quantidadeDenuncias.innerText = result.length;
+    }
+
+</script>
+</body>
+</html>

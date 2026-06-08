@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FraudVision - Denunciar Golpe</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+body{
+    background:#f5f6fa;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:white;
+    border-right:1px solid #e5e5e5;
+}
+
+.logo{
+    height:80px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:20px;
+    color:#e61f25;
+    font-size:22px;
+    font-weight:bold;
+    border-bottom:1px solid #eee;
+}
+
+.menu{
+    padding:15px;
+}
+
+.menu ul{
+    list-style:none;
+}
+
+.menu li{
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.menu li:hover{
+    background:#f5f5f5;
+}
+
+.menu li.active{
+    background:#e61f25;
+    color:white;
+}
+
+.content{
+    flex:1;
+}
+
+.topbar{
+    background:white;
+    height:80px;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items:center;
+    padding:0 30px;
+}
+
+.main{
+    padding:30px;
+}
+
+.main h1{
+    margin-bottom:5px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #eee;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:14px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.file-upload{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.btn{
+    background:#e61f25;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#cc171d;
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main{
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            FraudVision
+        </div>
+
+        <div class="menu">
+            <ul>
+            <li><i class="fa-solid fa-house"></i> <a href="dashboard.html">Dashboard</a></li>
+
+            <li class="active">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="consultar-numero.html">Consultar Número</a>
+            </li>
+
+            <li><i class="fa-regular fa-message"></i> <a href="analisar-mensagem.html">Analisar Mensagem</a></li>
+            <li><i class="fa-solid fa-triangle-exclamation"></i> <a href="cadastrar-denuncia.html">Denunciar Golpe</a></li>
+            <li><i class="fa-solid fa-clock-rotate-left"></i> <a href="historico.html">Histórico</a></li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i> <a href="TelaLogin.html">Sair</a></li>
+        </ul>
+        </div>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="topbar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="main">
+
+            <h1>Denunciar Golpe</h1>
+            <p class="subtitle">
+                Ajude a comunidade denunciando tentativas de fraude
+            </p>
+
+                <div class="card">
+                    <div class="form-group">
+                        <label>Tipo de golpe</label>
+                        <select name="risco" id="risco">
+                            <option>Falsa Central Bancária</option>
+                            <option>PIX Falso</option>
+                            <option>Phishing</option>
+                            <option>Golpe do WhatsApp</option>
+                            <option>Golpe do PIX Agendado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Número de telefone</label>
+                    <input type="text" name="telefone" id="telefone" placeholder="(11) 91234-5678">
+                </div>
+
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea name="descricao" id="descricao" placeholder="Descreva o ocorrido...">Recebi uma ligação se passando pelo banco pedindo meus dados e senha.</textarea>
+                </div>
+
+                <button class="btn" onclick="enviarDenuncia()">
+                    Enviar Denúncia
+                </button>
+                </div>
+        </div>
+
+    </main>
+</div>
+    <script src="js/index.js"></script>
+</body>
+</html>
