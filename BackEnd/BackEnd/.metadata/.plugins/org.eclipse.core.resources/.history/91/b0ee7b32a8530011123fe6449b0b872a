@@ -1,0 +1,5 @@
+package com.fraudvision.controller;
+
+public class UsuarioController {
+
+}

@@ -1,0 +1,5 @@
+package com.fraudvision.model;
+
+public class Usuario {
+
+}

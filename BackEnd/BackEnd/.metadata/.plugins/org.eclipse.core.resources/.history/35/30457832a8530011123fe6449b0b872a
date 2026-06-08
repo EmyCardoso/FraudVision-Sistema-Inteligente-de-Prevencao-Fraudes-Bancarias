@@ -1,0 +1,5 @@
+package com.fraudvision.repository;
+
+public interface UsuarioRepository {
+
+}
